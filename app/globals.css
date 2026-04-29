@@ -25,7 +25,7 @@
   --color-footer-text: var(--footer-text);
   --color-border: var(--border);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-display, var(--font-inter));
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html,

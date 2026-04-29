@@ -26,7 +26,7 @@ export function CaseCard({ data }: { data: Case }) {
         data-cursor="link"
       />
       <div className="relative z-10 flex flex-col items-center gap-4 px-6 pt-8 text-center md:px-8">
-        <h3 className="font-display text-[36px] font-bold uppercase leading-[1.2] tracking-[0.02em] text-white">
+        <h3 className="font-display text-[36px] leading-[1.2] tracking-[0.01em] text-white">
           {data.title}
         </h3>
         <div className="flex flex-wrap items-start justify-center gap-3">
@@ -59,9 +59,9 @@ function CardMedia({ data }: { data: Case }) {
 
   if (media.kind === "phones-trio") {
     return (
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex h-[547px] items-end justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 -bottom-12 z-0 flex h-[600px] items-end justify-center overflow-hidden">
         <div className="absolute bottom-[-80px] left-1/2 h-[423px] w-[318px] -translate-x-1/2 rounded-[100px] bg-[radial-gradient(circle_at_50%_60%,rgba(84,150,249,0.6),rgba(255,255,255,0.12)_60%,transparent_70%)] blur-[80px]" />
-        <div className="relative h-[510px] w-[510px] origin-bottom scale-[0.7] sm:scale-100">
+        <div className="relative h-[560px] w-[560px] origin-bottom scale-[0.7] sm:scale-100">
           {/* eslint-disable @next/next/no-img-element */}
           <img
             src="/cases/aff-phone-1.png"
@@ -86,13 +86,13 @@ function CardMedia({ data }: { data: Case }) {
 
   if (media.kind === "phone-single") {
     return (
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex h-[420px] items-end justify-center">
+      <div className="pointer-events-none absolute inset-x-0 -bottom-10 z-0 flex h-[480px] items-end justify-center">
         <div className="absolute bottom-0 left-1/2 h-[423px] w-[318px] -translate-x-1/2 rounded-[100px] bg-[radial-gradient(circle_at_50%_60%,rgba(84,150,249,0.6),rgba(255,255,255,0.12)_60%,transparent_70%)] blur-[80px]" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={media.src}
           alt=""
-          className="relative h-[420px] w-[260px] object-contain"
+          className="relative h-[480px] w-[280px] object-contain object-bottom"
         />
       </div>
     );
@@ -100,9 +100,9 @@ function CardMedia({ data }: { data: Case }) {
 
   // laptop
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
+    <div className="pointer-events-none absolute inset-x-0 -bottom-8 z-0">
       <div className="absolute bottom-[-100px] left-1/2 h-[686px] w-[516px] -translate-x-1/2 rounded-[100px] bg-[radial-gradient(circle_at_50%_60%,rgba(84,150,249,0.6),rgba(255,255,255,0.12)_60%,transparent_70%)] blur-[100px]" />
-      <div className={clsx("relative w-full", variant === "wide" ? "h-[480px]" : "h-[400px]")}>
+      <div className={clsx("relative w-full", variant === "wide" ? "h-[520px]" : "h-[440px]")}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={media.src}

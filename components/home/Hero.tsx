@@ -29,13 +29,13 @@ export function Hero() {
       >
         <motion.h1
           variants={fadeUp}
-          className="font-display text-[64px] font-bold uppercase leading-[1.05] tracking-[-0.01em] text-white md:text-[90px]"
+          className="font-display text-[64px] font-bold leading-[1.05] tracking-[-0.02em] text-white md:text-[90px]"
         >
           Semyon
         </motion.h1>
         <motion.p
           variants={fadeUp}
-          className="font-display mt-1 text-[28px] font-semibold uppercase leading-[1.2] tracking-[0.02em] text-white md:text-[40px]"
+          className="font-display mt-1 text-[28px] font-bold leading-[1.2] tracking-[-0.01em] text-white md:text-[40px]"
         >
           Product Designer
         </motion.p>
