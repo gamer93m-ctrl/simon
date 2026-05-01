@@ -64,12 +64,12 @@ export function CustomCursor() {
     <>
       <div
         ref={ring}
-        className="pointer-events-none fixed top-0 left-0 z-[100] h-10 w-10 rounded-full border border-white/40 mix-blend-difference will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[100] h-9 w-9 rounded-full border border-white/40 will-change-transform"
         style={{ transform: "translate3d(-100px,-100px,0)" }}
       />
       <div
         ref={dot}
-        className="pointer-events-none fixed top-0 left-0 z-[100] h-1.5 w-1.5 rounded-full bg-white mix-blend-difference will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[100] h-1.5 w-1.5 rounded-full bg-white will-change-transform"
         style={{ transform: "translate3d(-100px,-100px,0)" }}
       />
     </>
