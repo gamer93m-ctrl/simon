@@ -17,6 +17,18 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_50%,transparent_30%,rgba(26,26,26,0.85)_85%,rgba(26,26,26,1)_100%)]"
       />
 
+      {/* Bottom fade — kills the seam between aurora and next section */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%] bg-[linear-gradient(to_bottom,transparent_0%,rgba(26,26,26,0.7)_55%,#1a1a1a_100%)]"
+      />
+
+      {/* Top fade — same trick for the header area */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[25%] bg-[linear-gradient(to_top,transparent_0%,rgba(26,26,26,0.7)_60%,#1a1a1a_100%)]"
+      />
+
       {/* Title + buttons (vertically centered, stays clear of header + scroll cue) */}
       <motion.div
         variants={stagger}
@@ -68,7 +80,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-white/60 md:bottom-10"
         aria-hidden
       >
-        <span>Скролл — кейсы ниже</span>
+        <span>Скролл?</span>
         <span className="relative flex h-9 w-[22px] justify-center rounded-full border border-white/35">
           <motion.span
             animate={{ y: [0, 10, 0], opacity: [1, 0.2, 1] }}
