@@ -80,7 +80,7 @@ void main(){
   vec2 uv = gl_FragCoord.xy / u_res;
   float t  = u_time * 0.5;
 
-  vec3 col = vec3(0.102, 0.102, 0.102);
+  vec3 col = vec3(0.0686, 0.0686, 0.0686);
 
   float a0 = curtain(uv, 0.72, 0.8, 3.5, 0.0, t);
   float a1 = curtain(uv, 0.62, 1.1, 4.2, 2.1, t);
