@@ -7,7 +7,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-background pt-[140px] pb-24 md:pt-[180px] md:pb-32">
+    <section className="relative flex h-screen min-h-[720px] w-full flex-col overflow-hidden bg-background">
       {/* WebGL aurora background */}
       <AuroraCanvas />
 
@@ -17,12 +17,12 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_50%,transparent_30%,rgba(26,26,26,0.85)_85%,rgba(26,26,26,1)_100%)]"
       />
 
-      {/* Title + buttons */}
+      {/* Title + buttons (vertically centered, stays clear of header + scroll cue) */}
       <motion.div
         variants={stagger}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto flex max-w-[1060px] flex-col items-center px-6 text-center"
+        className="relative z-10 mx-auto flex w-full max-w-[1060px] flex-1 flex-col items-center justify-center px-6 pt-[120px] pb-24 text-center md:pt-[140px]"
       >
         <motion.h1
           variants={fadeUp}
@@ -58,6 +58,24 @@ export function Hero() {
             HH.RU
           </PillButton>
         </motion.div>
+      </motion.div>
+
+      {/* Scroll cue */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="pointer-events-none absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-white/60 md:bottom-10"
+        aria-hidden
+      >
+        <span>Скролл — кейсы ниже</span>
+        <span className="relative flex h-9 w-[22px] justify-center rounded-full border border-white/35">
+          <motion.span
+            animate={{ y: [0, 10, 0], opacity: [1, 0.2, 1] }}
+            transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity }}
+            className="mt-[6px] block h-[6px] w-[2px] rounded-full bg-white/80"
+          />
+        </span>
       </motion.div>
     </section>
   );
