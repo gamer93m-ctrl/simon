@@ -319,7 +319,7 @@ export const cases: Case[] = [
       variant: "half",
       tags: ["Engagement", "Retention"],
       description: "Кэшбэк как механика ежедневного возврата",
-      media: { kind: "placeholder" },
+      media: { kind: "phone-single", src: "/cases/cashback-phone.png" },
     },
     sections: [
       {
