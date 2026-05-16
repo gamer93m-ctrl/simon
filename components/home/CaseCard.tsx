@@ -57,6 +57,23 @@ function CardMedia({ data }: { data: Case }) {
     );
   }
 
+  if (media.kind === "video") {
+    return (
+      <div className="absolute inset-x-2 bottom-2 top-[226px] overflow-hidden rounded-[24px] bg-surface-2">
+        <video
+          src={media.src}
+          poster={media.poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+    );
+  }
+
   if (media.kind === "phones-trio") {
     return (
       <div className="pointer-events-none absolute inset-x-0 -bottom-12 z-0 flex h-[600px] items-end justify-center overflow-hidden">
